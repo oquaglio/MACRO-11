@@ -6,6 +6,4 @@ do
     grep -m1 "$info" /proc/cpuinfo
 done
 
-#./sieve -l 100
-
 exec ./sieve "$@"

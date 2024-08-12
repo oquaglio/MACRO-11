@@ -4,7 +4,7 @@ Build image:
 
 >docker build -t sieve .
 
-Run image:
+Run image with args for sieve bin:
 
->docker run sieve
+>docker run sieve -l 1000 -s 60
 
