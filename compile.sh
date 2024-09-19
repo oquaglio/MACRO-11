@@ -8,6 +8,9 @@ COMPILE_WITH_PROFILE="-Ofast -march=native -mtune=native -funroll-loops -flto -f
 # Compile the program with -fprofile-generate:
 gcc $GENERATE_PROFILE sieve.c -o sieve
 
+# Ensure the binary is executable
+chmod +x sieve
+
 # Generate .gcda profiling data:
 ./sieve
 
