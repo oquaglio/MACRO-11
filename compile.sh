@@ -9,7 +9,7 @@ COMPILE_WITH_PROFILE="-Ofast -march=native -mtune=native -funroll-loops -flto -f
 gcc $GENERATE_PROFILE sieve.c -o sieve
 
 # Generate .gcda profiling data:
-sieve
+./sieve
 
 # Recompile using the profile data:
 gcc $COMPILE_WITH_PROFILE sieve.c -o sieve
