@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM ubuntu:20.04 AS build
+FROM ubuntu:24.10 AS build
 
 RUN apt-get update && apt-get -y install gcc \
     && apt-get clean \
@@ -17,7 +17,7 @@ RUN chmod +x ./compile.sh ./run.sh \
     && ./compile.sh
 
 # Stage 2: Final Image
-FROM ubuntu:20.04
+FROM ubuntu:24.10
 
 WORKDIR /home/primes
 
